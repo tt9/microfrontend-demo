@@ -1,0 +1,11 @@
+<h1>Your News Update!</h1>
+
+<ul>
+    {{#each articles}}
+    <li>
+        <h2>{{this.title}}</h2>
+        <p><small>{{this.date}}</small></p>
+        <p>{{this.body}}</p>
+    </li>
+    {{/each}}
+</ul>

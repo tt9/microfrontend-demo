@@ -1,0 +1,23 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.cols {
+  display: flex;
+  flex-direction: row;
+
+  & > div {
+    flex: 1 1 auto;
+    border: 2px dashed grey;
+  }
+}
+
+iframe {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  height: 500px;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "micro-frontend-demos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "start": "npm run start:host && npm run start:app1 && npm run start:app2",
+    "start:host": "cd ./host-application && pm2 start --name host npm -- start && cd ../",
+    "start:app1": "cd ./news-micro-frontend && pm2 start --name news npm -- start && cd ../",
+    "start:app2": "cd ./estimator-feature && pm2 start --name estimator npm -- start && cd ../",
+    "stop": "pm2 stop all && pm2 delete all",
+    "list": "pm2 list"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pm2": "^4.5.0"
+  }
+}
